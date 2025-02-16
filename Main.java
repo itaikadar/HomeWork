@@ -1,146 +1,191 @@
-import java.util.Scanner;
+import java.util.Arrays;
+
+
 public class Main {
     public static void main(String[] args) {
-        //1  Check Voting Eligibility
-
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Please enter your age");
-//        double age = sc.nextDouble();
-//        if (age >= 18) {
-//            System.out.println("You are eligible to vote");
-//        } else if (age <= 18) {
-//          System.out.println("You are not eligible to vote");
+//        //1
+//        int[] numbers = {1, 2, 3, 4, 5};
+//        for (int num : numbers) {
+//            System.out.println(num);
 //        }
 
 
-        //2 Simple Calculator
-
-//        Scanner sc = new Scanner(System.in);
-//         System.out.println("PLease choose two numbers and the action you want to do with them options are +,-,*,/");
-//        int number1 = sc.nextInt();
-//        String action = sc.next();
-//        int number2 = sc.nextInt();
-//         if (action.equals("+")){
-//        System.out.println(number1 + " + " + number2 + " = " + (number1 + number2));}
-//         else if (action.equals("-")){
-//          System.out.println(number1 + " - " + number2 + " = " + (number1 - number2));}
-//         else if (action.equals("*")){
-//         System.out.println(number1 + " * " + number2 + " = " + (number1 * number2));}
-//        else if (action.equals("/")){
-//        System.out.println(number1 + " / " + number2 + " = " + (number1 / number2));}
+//        //2
+//        int[] numbers = {10,12,14,16};
+//        System.out.println(numbers[0]);
 
 
 //        //3
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Please choose a number");
-//        int number = sc.nextInt();
-//        if (number % 5 == 0 && number % 3 == 0) {
-//            System.out.println("The number is divisible by 5 and 3");
-//        } else if (number % 3 == 0) {
-//            System.out.println("The number is only divisible by 3");
-//        } else if (number % 5 == 0) {
-//            System.out.println("The number is only divisible by 5");
+//        int[] arr = {1, 6, 3, 8, 2, 10, 4};
+//        for (int num : arr) {
+//            if (num > 5) {
+//                System.out.print(num + " ");
+//            }
 //        }
 
 
-        //4
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Please enter your password");
-//        String password = sc.nextLine();
-//
-//        if (password.equals("Zxasqw12")) {
-//            System.out.println("This password is predefined");
-//        } else {
-//            System.out.println("Your password isn't predefined, please try again");
+//        //4
+//        int[] arr = {5,2,6,1,8,9};
+//        System.out.println(arr[5]);
+
+
+//          //5
+//          int[] arr={5,12,4,5};
+//          int sum=0;
+//          for(int num:arr){
+//              sum+=num;
+//          }
+//    System.out.println(sum);
+
+
+        //6
+//       for (int i = 1; i<=5; i++){
+//           System.out.println(i);
 //        }
-
-
-        //5
-
-//       Scanner sc = new Scanner(System.in);
-//       System.out.println("please choose 3 numbers");
-//       double number1 = sc.nextDouble();
-//       double number2 = sc.nextDouble();
-//       double number3 = sc.nextDouble();
 //
-//        if (number1 > number2 && number1 > number3) {
-//            System.out.println(number1 + " is the largest number");}
-//            else if (number2 > number3 && number2 > number3) {
-//                System.out.println(number2 + " is the largest number");}
-//                else if (number3 > number2 && number3 > number2) {
-//                    System.out.println(number3 + " is the largest number");}
 
-        //7
-//    Scanner sc = new Scanner(System.in);
-//    System.out.println("please choose 3 numbers");
-//    double number1=sc.nextDouble();
-//    double number2=sc.nextDouble();
-//    double number3=sc.nextDouble();
-//    System.out.println("The average of those numbers is ");
-//    System.out.println(number1+number2+number3 /3);
+
+//        //7
+//        for (int i = 5; i > 0; i--){
+//            System.out.println(i);
+//        }
 
 
 //        //8
-//        Scanner sc = new Scanner(System.in);
-//        System.out.print("Input an integer:");
-//        int num = sc.nextInt();
+//        for (int i = 1; i <= 10; i++) {
+//            if (i % 2 == 0) {
+//                System.out.println(i);
+//            }
 //
-//        int sum = 0;
-//        while (num > 0) {
-//            sum += num % 10;
-//            num /= 10;
 //        }
-//
-//        System.out.println("The sum of the digits is: " + sum);
 
 
 //        //9
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Please enter one single character");
-//        String letter = sc.nextLine();
-//        if (letter.equals("a") || letter.equals("e") || letter.equals("i") || letter.equals("o") || letter.equals("u")) {
-//            System.out.println("its an vowel");
-//
-//        } else {
-//            System.out.println("its not an vowel");
-//        }
-//    }
+//        for (int i = 1; i <= 10; i++) {
+//            if (i % 2 == 1){
+//                System.out.println(i);
 
+
+        //10
+//        int[] arr = {4, 2, 9, 1, 13, 17, 21};
+//        int count = 0;
 //
-//        //10
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Please enter your grade");
-//        int grade = sc.nextInt();
-//        if (grade >= 90) {
-//            System.out.println("Your grade is A");
-//        }else if (grade >= 80) {
-//            System.out.println("Your grade is B");
-//        }else if (grade >= 70) {
-//            System.out.println("Your grade is C");
-//        }else {
-//            System.out.println("Your grade is F");
+//        for (int num : arr){
+//            if (num > 10) {
+//                count++;
+//            }
 //        }
+//System.out.println("Count of numbers bigger than 10 is " + count);
+//    }
+//}
+
 
         //11
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Please enter 2 numbers");
-//        int a = sc.nextInt();
-//        int b = sc.nextInt();
-//        if (a > 0 && b > 0) {
-//            System.out.println("both numbers are positive");
-//        } else if (a < 0 && b < 0) {
-//            System.out.println("both numbers are negative");
+//        int[] arr = {2, 1, -5, -22, 10, -1};
+//        int counter = 0;
+//
+//        for (int less : arr) {
+//            if (less < 0) {
+//                counter++;
+//            }
 //        }
-//        if (a == 0 && b == 0) {
-//            System.out.println("both numbers are zero");
-//        } else if (a > 0 && b < 0) {
-//            System.out.println(a + " is positive and " + b + " is negative");
-//        } else if (a < 0 && b > 0) {
-//            System.out.println(a + " is negative and " + b + " is positive");
+//        System.out.println("The count of numbers that are less then zero is " + counter);
+
+
+        //12
+//        int[] arr = {1, 1, 2, 2, 1, 1};
+//        int number;
+//        int count = 0;
+//        for (int i = 1; i < arr.length; i++) {
+//            if (arr[i] == 1) {
+//                count++;
+//            }
+//        }
+//        System.out.println(count);
+
+
+        //13
+//        int[] array = {10, 45, 60, 23, 89, 32};
+//        for (int num : array) {
+//            if (num > 50) {
+//                System.out.println("the first number that is bigger then 50 is  " + num);
+//                return; // Exit the loop
+//            }
+//
+//        }
+
+
+        //14
+//        int[] arr = {5,2,3,4,5,6,7,8,9};
+//        int smallest = arr[0];
+//        for (int i = 1; i < arr.length; i++) {
+//            if (arr[i] < smallest) {
+//                smallest = arr[i];
+//            }
+//        }
+//        System.out.println(smallest);
+
+
+        //15
+//
+//        int[] arr = {1, 2, 3, 4, 5};
+//
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = arr[i] + 1;
+//        }
+//
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.println(arr[i]);
+//        }
+
+
+        //16
+//        int[] arr = {1, 2, 3, 4, 5};
+//
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = arr[i] * 2;
+//        }
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.println(arr[i]);
+//        }
+
+
+//        //17
+//        int[] arr = {1, 4, -21, 5, -1, -412, 51};
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] < 0) {
+//                arr[i] = 0;
+//            }
+//        }
+//        System.out.println(Arrays.toString(arr));
+
+
+        //18
+//        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+//
+//
+//        for (int i = 0; i < numbers.length; i++) {
+//            if (numbers[i] % 2 == 0) {
+//                System.out.println(numbers[i]);
+//            }
+//        }
+
+
+
+//        //19
+//        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+//
+//        for (int i = 0; i < numbers.length; i++) {
+//            if (numbers[i] % 2 == 1) {
+//                System.out.println(numbers[i]);
+//            }
 //        }
     }
 }
-
 
 
 

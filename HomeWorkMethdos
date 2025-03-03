@@ -1,0 +1,284 @@
+public class Main {
+    static void printHello() {
+        System.out.println("Hello World");
+    }
+
+    static int sum1(int a, int b) {
+        return a + b;
+    }
+
+    static boolean isEven(int number) {
+        if (number % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    static int max(int num1, int num2) {
+        if (num1 > num2) {
+            return num1;
+        } else {
+            return num2;
+        }
+    }
+
+    static int min(int num1, int num2, int num3) {
+        if (num1 <= num2 && num1 <= num3) {
+            return num1;
+        } else if (num2 <= num1 && num2 <= num3) {
+            return num2;
+        } else {
+            return num3;
+        }
+    }
+
+    static int factorial(int n) {
+        return n == 0 ? 1 : n * factorial(n - 1);
+    }
+
+    static int power(int base, int exponent) {
+        long result = 1;
+
+        for (int i = 1; i <= exponent; i++) {
+            result *= base;
+
+
+        }
+        return (int) result;
+    }
+
+    static boolean isPrime(int n) {
+        if (n < 2) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+
+    static int sumOfDigits(int num) {
+        num = Math.abs(num);
+        int sum = 0;
+        while (num > 0) {
+            sum = sum + num % 10;
+            num /= 10;
+
+        }
+        return sum;
+
+    }
+
+    static int MaxInArrays(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            throw new IllegalArgumentException("Array is null or empty");
+        }
+
+        int max = arr[0];
+
+        for (int num : arr) {
+            if (num > max) {
+                max = num;
+            }
+        }
+
+        return max;
+    }
+
+    static int minInArrays(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            throw new IllegalArgumentException("Array is null or empty");
+        }
+        int min = arr[0];
+        for (int num : arr) {
+            if (num < min) {
+                min = num;
+            }
+        }
+        return min;
+    }
+
+    static int sumArrays(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            throw new IllegalArgumentException("Array is null or empty");
+        }
+        int sum = 0;
+        for (int num : arr) {
+            sum += num;
+
+        }
+        return sum;
+    }
+
+
+    static void reversArray(int[] arr) {
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    static boolean isSorted(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i - 1] > arr[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    static int countVowels(String str) {
+        int count = 0;
+        String vowels = "aeiouAEIOU";
+        for (char c : str.toCharArray()) {
+            if (vowels.indexOf(c) != -1) {
+                count++;
+            }
+
+        }
+        return count;
+    }
+
+     static String reverseString(String str) {
+        return new StringBuilder(str).reverse().toString();
+     }
+    static boolean isPalindrome(String str) {
+        String reversed = reverseString(str);
+        return str.equals(reversed);
+    }
+    static String toUpperCase(String str) {
+        return str.toUpperCase();
+    }
+    static int countWords(String sentence) {
+        if (sentence == null || sentence.trim().isEmpty()) {
+            return 0;
+        }
+        return sentence.trim().split("\\s+").length;
+    }
+
+
+
+
+
+    public static void main(String[] args) {
+      //1
+        printHello();
+
+
+      //2
+           int sum = sum1(1, 2);
+            System.out.println(sum);
+
+
+      //3
+        System.out.println(isEven(3));
+
+
+      //4
+           System.out.println(max(1,2));
+
+
+        //5
+        int result1=min(1,2,3);
+        System.out.println("The min value is: " +result1);
+
+
+        //6
+        int factorial = factorial(5);
+        System.out.println(factorial);
+
+
+         //7
+       int base=5, exponent=3;
+       System.out.println(base + "^" + exponent + " = " + power(base, exponent));
+
+
+         //8
+        int PrimeNumber = 2;
+        System.out.println(isPrime(PrimeNumber));
+
+
+         //9
+        int num1=98; int num2=56;
+        System.out.println(gcd(num1,num2));
+
+
+
+        //10
+        System.out.println(sumOfDigits(42));
+
+
+
+
+        //11
+        int[] arr1 = {1,2,3,4,5,6,7,8,9};
+        System.out.println(MaxInArrays(arr1));
+
+
+
+
+         //12
+        int[] arr2 = {1,2,3,4,5,6,7,8,9};
+        System.out.println(minInArrays(arr2));
+
+
+
+
+
+           //13
+        int[] arr3 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+       System.out.println(sumArrays(arr3));
+
+
+
+
+           //14
+        int[] arr4= {1,2,3,4,5,6,7,8,9};
+      reversArray(arr4);
+
+
+      //15
+        int[]  arr5 = {1,2,3,4,5,6,7,8,9};
+        System.out.println(isSorted(arr5));
+
+
+             //16
+        String testString1 = "hello";
+        System.out.println(countVowels(testString1));
+
+
+             //17
+       String testString2 = "hello";
+        System.out.println(reverseString(testString2));
+
+
+               //18
+        System.out.println(isPalindrome("madam"));
+
+
+               //19
+        String testString3 = "hello";
+        System.out.println(toUpperCase(testString3));
+
+
+
+               //20
+        System.out.println(countWords("Hello world! This is Java."));
+
+
+
+    }
+}

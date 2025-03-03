@@ -1,3 +1,6 @@
+//hey,copy this to intel or what you got or just use it here
+
+
 public class Main {
     static void printHello() {
         System.out.println("Hello World");
@@ -282,3 +285,4 @@ public class Main {
 
     }
 }
+
